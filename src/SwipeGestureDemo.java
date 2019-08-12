@@ -9,6 +9,8 @@ import io.appium.java_client.android.AndroidTouchAction;
 
 import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
+import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
+import static java.time.Duration.ofSeconds;
 
 public class SwipeGestureDemo extends Capabilities{
 
@@ -26,9 +28,9 @@ public class SwipeGestureDemo extends Capabilities{
 		WebElement hour = androidDriver.findElementByXPath("//*[@content-desc='9']");
 		t.tap(tapOptions().withElement(element(hour))).perform();
 		
-//		WebElement minute = androidDriver.findElementByXPath("//*[@content-desc='45']");
-		
-		
+		WebElement minuteInit = androidDriver.findElementByXPath("//*[@content-desc='15']");
+		WebElement minuteEnd = androidDriver.findElementByXPath("//*[@content-desc='35']");
+		t.longPress(longPressOptions().withElement(element(minuteInit)).withDuration(ofSeconds(1))).moveTo(element(minuteEnd)).release().perform();
 		
 	}
 

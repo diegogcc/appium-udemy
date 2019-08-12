@@ -18,6 +18,13 @@ public class LocatorBasics extends Capabilities{
 		 */
 		
 		androidDriver.findElementByXPath("//android.widget.TextView[@text='Preference']").click();
+		androidDriver.findElementByXPath("//android.widget.TextView[@text='3. Preference dependencies']").click();
+		androidDriver.findElementById("android:id/checkbox").click();
+		//click on second element found:
+//		(//tagname[@attribute='value'])[2]
+		androidDriver.findElementByXPath("(//android.widget.RelativeLayout)[2]").click();
+		androidDriver.findElementByClassName("android.widget.EditText").sendKeys("wifitest");
+		androidDriver.findElementsByClassName("android.widget.Button").get(1).click();
 	}
 
 }

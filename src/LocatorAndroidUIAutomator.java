@@ -8,7 +8,7 @@ public class LocatorAndroidUIAutomator extends Capabilities {
 
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
-		AndroidDriver<AndroidElement> androidDriver = capabilities();
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Nexus_6P");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //		androidDriver.findElementByAndroidUIAutomator("attribute(value)")
 		androidDriver.findElementByAndroidUIAutomator("text(\"Views\")").click();

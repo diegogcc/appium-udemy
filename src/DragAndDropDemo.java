@@ -13,7 +13,7 @@ import static io.appium.java_client.touch.offset.ElementOption.element;
 public class DragAndDropDemo extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = capabilities();
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Nexus_6P");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		androidDriver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
 		androidDriver.findElementByAndroidUIAutomator("text(\"Drag and Drop\")").click();;

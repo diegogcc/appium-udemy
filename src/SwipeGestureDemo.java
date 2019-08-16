@@ -15,7 +15,7 @@ import static java.time.Duration.ofSeconds;
 public class SwipeGestureDemo extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = capabilities();
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Nexus_6P");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 //		First go to the Date widget

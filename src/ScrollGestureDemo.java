@@ -7,7 +7,7 @@ import io.appium.java_client.android.AndroidElement;
 public class ScrollGestureDemo extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = capabilities();
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Nexus_6P");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		androidDriver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
 		

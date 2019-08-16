@@ -9,7 +9,7 @@ import io.appium.java_client.android.AndroidElement;
 public class DeviceStatusAndEvents extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = capabilities();
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Nexus_6P");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		System.out.println("Current Activity: " + androidDriver.currentActivity());

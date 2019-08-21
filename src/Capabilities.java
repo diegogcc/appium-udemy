@@ -14,12 +14,14 @@ public class Capabilities {
 		// TODO Auto-generated method stub
 		
 		File file = new File("src");
-		File fapk = new File(file,"ApiDemos-debug.apk");
+//		File fapk = new File(file,"ApiDemos-debug.apk");
+		File fapk = new File(file,"General-Store.apk");
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 //		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device"); // Any real device connected
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5);
 		cap.setCapability(MobileCapabilityType.APP, fapk.getAbsolutePath());
 		/*		
 		 * For real devices in which I don't have the *.apk but an already installed app:

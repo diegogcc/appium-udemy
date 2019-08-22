@@ -6,6 +6,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class Capabilities {
@@ -20,7 +21,7 @@ public class Capabilities {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 //		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device"); // Any real device connected
-		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
 		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5);
 		cap.setCapability(MobileCapabilityType.APP, fapk.getAbsolutePath());
 		/*		

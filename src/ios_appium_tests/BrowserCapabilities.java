@@ -10,30 +10,20 @@ import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class Capabilities {
+public class BrowserCapabilities {
 
-	public static IOSDriver<IOSElement> capabilities(String device, String udid) throws MalformedURLException {
-		// TODO Auto-generated method stub
+	public static IOSDriver<IOSElement> capabilities(String device, String udid) throws MalformedURLException{
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 		cap.setCapability(MobileCapabilityType.UDID, udid);
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
+		cap.setCapability(MobileCapabilityType.BROWSER_NAME, "Safari");
 //		For iOS v > 10.2
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
 		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5);
 
-//		APP:
-//		Downloaded https://github.com/appium/ios-uicatalog and ran it on a simulator to build it
-		cap.setCapability(MobileCapabilityType.APP, "/Users/diegocampo/Library/Developer/Xcode/DerivedData/UICatalog-eipfjklyxfhdczbxqhbpnbweuijw/Build/Products/Debug-iphonesimulator/UICatalog.app");
-		/*
-		 * For real devices:
-		 * install libimobiledevice and ios-deploy (http://appium.io/docs/en/drivers/ios-xcuitest-real-devices/)
-		 * new capabilities are necessary 
-		 * "xcodeOrgId" (team id)
-		 * "xcodeSigningId": "iPhone Developer"
-		 * "updatedWDABundleId"
-		 */
 		IOSDriver<IOSElement> iosDriver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub") ,cap);
 		return iosDriver;
 	}
+
 }

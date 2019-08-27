@@ -1,3 +1,4 @@
+package android_appium_tests;
 import java.net.MalformedURLException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;

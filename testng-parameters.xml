@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite 1">
+	<parameter name="URL" value="http://parameter.url.com/" />
+	<test thread-count="5" name="Test">
+		<parameter name="URL"
+			value="http://parameter.url.com/test-module" /> <!-- This overrides the Suite's parameter -->
+		<parameter name="APIKey" value="8172h3unj4k123lk4hn12l3kj4"/>
+		<classes>
+			<class name="test.TestDemo">	 <!-- package.className -->
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Suite --> 

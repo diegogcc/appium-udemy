@@ -23,4 +23,35 @@ public class TestDemo extends Capabilities{
 		IOSDriver<IOSElement> iosDriver = iosSimulatorCapabilities("iPhone 8","9D9E3338-58FE-4696-9F17-3963CE170ED5");
 		iosDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
+	
+	@Test
+	public void testMobileHome() {
+//		does nothing
+	}
+	
+	@Test
+	public void testMobileLogin() {
+//		does nothing
+	}
+	
+	@Test
+	public void testMobileDetailPage() {
+//		does nothing
+	}
+	
+	@Test
+	public void testWebHome() {
+//		does nothing
+	}
+	
+	@Test
+	public void testWebLogin() {
+//		does nothing
+	}
+	
+	@Test
+	public void testWebDetailPage() {
+//		does nothing
+	}
+	
 }

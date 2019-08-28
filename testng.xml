@@ -5,8 +5,9 @@
 		<classes>
 			<class name="test.TestDemo">	 <!-- package.className -->
 				<methods>
-					<exclude name="testIOSSimulator"/>
-					<include name="testAndroidEmulator"/> <!-- the same as the line above -->
+					<exclude name="testIOSSimulator"/> <!-- Runs EVERYTHING except this method -->
+					<include name="testAndroidEmulator"/> <!-- Runs ONLY this method -->
+					<exclude name=".*Mobile.*"/> <!-- Excludes every method with MOBILE inside the name -->
 				</methods>
 			</class>
 		</classes>

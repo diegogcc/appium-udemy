@@ -50,7 +50,7 @@ public class TestDemo extends Capabilities{
 //		does nothing
 	}
 	
-	@Test
+	@Test(enabled=false) // TestNG will skip this test
 	public void testMobileLogin() {
 //		does nothing
 	}
@@ -60,17 +60,17 @@ public class TestDemo extends Capabilities{
 //		does nothing
 	}
 	
-	@Test
+	@Test(dependsOnMethods= {"testWebLogin"})
 	public void testWebHome() {
 //		does nothing
 	}
 	
-	@Test
+	@Test(timeOut=15000) // Timeout set for this method (set in millis)
 	public void testWebLogin() {
 //		does nothing
 	}
 	
-	@Test
+	@Test(dependsOnMethods= {"testWebLogin", "testWebHome"})
 	public void testWebDetailPage() {
 //		does nothing
 	}

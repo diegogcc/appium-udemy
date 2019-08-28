@@ -3,6 +3,7 @@ package test;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -12,7 +13,27 @@ import io.appium.java_client.ios.IOSElement;
 
 public class TestDemo extends Capabilities{
 	
-	@Test
+	@BeforeMethod
+	public void prerequisite() {
+		/*
+		 * Other basic annotations: (https://www.tutorialspoint.com/testng/testng_basic_annotations.htm)
+		 * @BeforeSuite
+		 * @AfterSuite
+		 * @BeforeClass
+		 * @AfterClass
+		 * @BeforeTest
+		 * @AfterTest
+		 * @BeforeMethod
+		 * @AfterMethod
+		 * @DataProvider
+		 * @Factory
+		 * @Listeners
+		 * @Parameters
+		 * @Test
+		 */
+	}
+	
+	@Test(groups= {"Smoke"})
 	public void testAndroidEmulator() throws MalformedURLException {
 		AndroidDriver<AndroidElement> androidDriver = androidEmulatorCapabilities("Pixel_2_API_25");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -24,7 +45,7 @@ public class TestDemo extends Capabilities{
 		iosDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	@Test
+	@Test(groups= {"Smoke"})
 	public void testMobileHome() {
 //		does nothing
 	}
@@ -34,7 +55,7 @@ public class TestDemo extends Capabilities{
 //		does nothing
 	}
 	
-	@Test
+	@Test(groups= {"Smoke"})
 	public void testMobileDetailPage() {
 //		does nothing
 	}

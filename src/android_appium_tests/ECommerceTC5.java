@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -21,6 +22,19 @@ public class ECommerceTC5 extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		// TODO Auto-generated method stub
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25");
+		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		String prod = "Air Jordan 4 Retro";
+		ECommerceTC1.enterTheShop(androidDriver);
+		ECommerceTC2.addToCart(androidDriver, prod);
+		ECommerceTC3.verifyCheckoutPage(androidDriver, prod);
+		seeTermsOfConditions(androidDriver);
+		closeTermsOfConditions(androidDriver);
+		tapMarketingCheckbox(androidDriver);
+	}
+	
+	@Test
+	public void runTC6() throws InterruptedException, MalformedURLException {
 		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String prod = "Air Jordan 4 Retro";

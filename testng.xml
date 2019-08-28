@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite 1">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="test.TestDemo">	 <!-- package.className -->
+				<methods>
+					<exclude name="testIOSSimulator"/>
+					<include name="testAndroidEmulator"/> <!-- the same as the line above -->
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<!-- <test thread-count="5" name="e-Commerce app">
+		<classes>
+			<class name="android_appium_tests.ECommerceTC5" />
+		</classes>
+	</test>  -->
+</suite> <!-- Suite --> 

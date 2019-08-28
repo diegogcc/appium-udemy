@@ -19,8 +19,8 @@ public class TestDemo extends Capabilities{
 	}
 	
 	@Test
-	public void testIOSSimulator() throws MalformedURLException {
-		IOSDriver<IOSElement> iosDriver = iosSimulatorCapabilities("iPhone 8", "9D9E3338-58FE-4696-9F17-3963CE170ED5");
+	public void testIOSSimulator() throws MalformedURLException{
+		IOSDriver<IOSElement> iosDriver = iosSimulatorCapabilities("iPhone 8","9D9E3338-58FE-4696-9F17-3963CE170ED5");
 		iosDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 }

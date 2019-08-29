@@ -6,49 +6,44 @@ import org.testng.ITestResult;
 
 public class TestNGListenersDemo implements ITestListener{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	@Override
-	public void onFinish(ITestContext arg0) {
+	public void onFinish(ITestContext result) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onStart(ITestContext arg0) {
+	public void onStart(ITestContext result) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onTestFailure(ITestResult arg0) {
+	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		System.out.println("The test has failed");
+		System.out.println("The method that failed was: " + result.getName());
 	}
 
 	@Override
-	public void onTestSkipped(ITestResult arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onTestStart(ITestResult arg0) {
+	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onTestSuccess(ITestResult arg0) {
+	public void onTestStart(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		
 	}

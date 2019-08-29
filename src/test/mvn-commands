@@ -1,0 +1,9 @@
+Maven commands run from the project level (terminal)
+
+- "mvn clean"
+     -> same as "mvn clean:clean"
+- "mvn compile"
+     -> "mvn compiler:compile"
+- "mvn test"
+
+see more: https://www.logicbig.com/tutorials/build-tools/apache-maven/playing-with-maven-commands.html

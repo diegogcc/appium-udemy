@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite 1">
-	<test thread-count="5" name="Regression">
+	<test thread-count="5" name="Smoke">
 		<classes>
 			<class name="test.TestDemo">	 <!-- package.className -->
 				<methods>
 					<exclude name="testIOSSimulator"/> <!-- Runs EVERYTHING except this method -->
-					<include name="testAndroidEmulator"/> <!-- Runs ONLY this method -->
 					<exclude name=".*Mobile.*"/> <!-- Excludes every method with MOBILE inside the name -->
 				</methods>
 			</class>
 		</classes>
-	</test> <!-- Test -->
-	<!-- <test thread-count="5" name="e-Commerce app">
-		<classes>
-			<class name="android_appium_tests.ECommerceTC5" />
-		</classes>
-	</test>  -->
+	</test> 
 </suite> <!-- Suite --> 

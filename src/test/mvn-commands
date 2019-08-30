@@ -7,3 +7,9 @@ Maven commands run from the project level (terminal)
 - "mvn test"
 
 see more: https://www.logicbig.com/tutorials/build-tools/apache-maven/playing-with-maven-commands.html
+
+- "mvn -Dtest=testClass test"     ->     Runs a single test
+
+PROFILES:
+
+- "mvn test -Pregression"     ->     Runs the regression profile

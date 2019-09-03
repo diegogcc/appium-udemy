@@ -16,8 +16,8 @@ public class Capabilities {
 		// TODO Auto-generated method stub
 		
 		File file = new File("src");
-//		File fapk = new File(file,"ApiDemos-debug.apk");
-		File fapk = new File(file,"General-Store.apk");
+		File fapk = new File(file,"ApiDemos-debug.apk");
+//		File fapk = new File(file,"General-Store.apk");
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);

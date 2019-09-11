@@ -2,8 +2,9 @@ package android_appium_tests;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -28,7 +29,7 @@ public class ECommerceTC1 extends Capabilities{
 		// TODO Auto-generated method stub
 		driver.findElementById("com.androidsample.generalstore:id/btnLetsShop").click();
 		String toastMessage = driver.findElementByXPath("//android.widget.Toast[1]").getAttribute("name");
-		Assertions.assertEquals("Please enter your name", toastMessage);
+		Assert.assertEquals("Please enter your name", toastMessage);
 	}
 
 	public static void enterTheShop(AndroidDriver<AndroidElement> driver){

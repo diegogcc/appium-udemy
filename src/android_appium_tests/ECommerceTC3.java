@@ -2,7 +2,6 @@ package android_appium_tests;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.jupiter.api.Assertions;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -27,7 +26,6 @@ public class ECommerceTC3 extends Capabilities{
 		String cart = driver.findElementById("com.androidsample.generalstore:id/productName").getText();
 		System.out.println(prod + " >>>> Expected");
 		System.out.println(cart + " >>>> Actual");
-//		Assertions.assertEquals(prod, cart);
 	}
 
 }

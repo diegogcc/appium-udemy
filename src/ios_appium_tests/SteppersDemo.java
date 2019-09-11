@@ -3,10 +3,10 @@ package ios_appium_tests;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.jupiter.api.Assertions;
 
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
+import org.testng.Assert;
 
 public class SteppersDemo extends Capabilities{
 
@@ -19,7 +19,7 @@ public class SteppersDemo extends Capabilities{
 		incrementStepper1Count(iosDriver, 5);
 		int s1 = getStepper1Count(iosDriver);
 		decrementStepper1Count(iosDriver,2);
-		Assertions.assertEquals(2, s1);
+		Assert.assertEquals(2, s1);
 	}
 
 	public static int getStepper1Count(IOSDriver<IOSElement> driver) {

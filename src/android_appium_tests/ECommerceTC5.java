@@ -22,7 +22,7 @@ public class ECommerceTC5 extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		// TODO Auto-generated method stub
-		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25");
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25","General-Store.apk");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String prod = "Air Jordan 4 Retro";
 		ECommerceTC1.enterTheShop(androidDriver);
@@ -35,7 +35,7 @@ public class ECommerceTC5 extends Capabilities{
 	
 	@Test
 	public void runTC6() throws InterruptedException, MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25");
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25","General-Store.apk");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String prod = "Air Jordan 4 Retro";
 		ECommerceTC1.enterTheShop(androidDriver);

@@ -11,7 +11,7 @@ import pageObjects.Preference;
 public class PageFactoryDemo extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25");
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25","General-Store.apk");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		HomePage homePage = new HomePage(androidDriver);

@@ -18,7 +18,7 @@ public class ECommerceTC6 extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		// TODO Auto-generated method stub
-		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25");
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25","General-Store.apk");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String prod = "Air Jordan 4 Retro";
 		goToWebView(androidDriver, prod);

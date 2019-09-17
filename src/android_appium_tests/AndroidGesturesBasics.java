@@ -16,7 +16,7 @@ public class AndroidGesturesBasics extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
-		AndroidDriver<AndroidElement> androidDriver = capabilities("Nexus_6P");
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Nexus_6P","ApiDemos-debug.apk");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		androidDriver.findElementByAndroidUIAutomator("text(\"Views\")").click();
 		// Gesture 1 = tap

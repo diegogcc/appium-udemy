@@ -13,7 +13,7 @@ import io.appium.java_client.android.AndroidElement;
 public class ECommerceTC4 extends Capabilities{
 
 	public static void main(String[] args) throws MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25");
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25","General-Store.apk");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		validateCheckoutItems(androidDriver, "Air Jordan 4 Retro", "Air Jordan 1 Mid SE", 280.97);
 	}

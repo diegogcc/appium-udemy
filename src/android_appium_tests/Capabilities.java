@@ -12,12 +12,12 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class Capabilities {
 
-	public static AndroidDriver<AndroidElement> capabilities(String device) throws MalformedURLException {
+	public static AndroidDriver<AndroidElement> capabilities(String device, String app) throws MalformedURLException {
 		// TODO Auto-generated method stub
 		
 		File file = new File("src");
-		File fapk = new File(file,"ApiDemos-debug.apk");
-//		File fapk = new File(file,"General-Store.apk");
+		File fapk = new File(file,app);
+//		File fapk = new File(file,"General-Store.apk" or "ApiDemos-debug.apk");
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);

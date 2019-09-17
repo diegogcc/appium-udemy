@@ -14,7 +14,7 @@ import io.appium.java_client.android.AndroidElement;
 public class ECommerceTC2 extends Capabilities{
 	
 	public static void main(String[] args) throws MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25");
+		AndroidDriver<AndroidElement> androidDriver = capabilities("Pixel_2_API_25","General-Store.apk");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		ECommerceTC1.enterTheShop(androidDriver);
 		addToCart(androidDriver, "Jordan 6 Rings");

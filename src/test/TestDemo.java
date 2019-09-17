@@ -1,5 +1,6 @@
 package test;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
@@ -36,8 +37,8 @@ public class TestDemo extends Capabilities{
 	}
 	
 	@Test(groups= {"Smoke"})
-	public void testAndroidEmulator() throws MalformedURLException {
-		AndroidDriver<AndroidElement> androidDriver = androidEmulatorCapabilities("Pixel_2_API_25");
+	public void testAndroidEmulator() throws IOException {
+		AndroidDriver<AndroidElement> androidDriver = androidEmulatorCapabilities("Pixel_2_API_25","GeneralStoreApp");
 		androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
